@@ -12,7 +12,8 @@ import './Todo.css';
 export class TodoList extends React.Component {
 	
 	render() {
-		const todoList = this.props.todoList.map((todo, i) => {
+		const todos = this.props.items;
+		const todoList = todos.map((todo, i) => {
 			return (
 					<Todo key={i} text={todo.text} priority={todo.priority} dueDate={todo.dueDate}/>
 			);

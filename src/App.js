@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {TodoList} from "./TodoList";
+import {TodoList} from "./component/TodoApp/TodoList";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import moment from "moment";
 import {Login} from './component/Login';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
-import { Todo } from './component/TodoApp/Todo';
+
+
+const todos = [];
 
 const LoginView = () => (
     <Login/>
@@ -17,7 +19,7 @@ const TodoView = () => (
     <div>
         <br/>
         <br/>
-        <TodoList />
+        <TodoList items = {todos}/>
     </div>
 );
 
@@ -27,6 +29,8 @@ const TodoView = () => (
         <CoursesList/>
     </div>
 );*/
+
+
 
 
 class App extends Component {
